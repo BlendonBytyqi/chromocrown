@@ -91,7 +91,8 @@ footer {
   cursor: pointer;
   z-index: 10;
   transition: 0.3s;
-}.about-container {
+}
+.about-container {
   padding: 60px 40px;
   max-width: 900px;
   margin: auto;
@@ -103,3 +104,60 @@ footer {
   font-size: 1rem;
   color: #333;
 }
+
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.login-container .tab {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.login-container .tab div {
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+}
+
+.login-container .tab .active {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.login-container form {
+    display: none;
+    flex-direction: column;
+}
+
+.login-container form.active {
+    display: flex;
+}
+
+.login-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    padding: 10px;
+    border: none;
+    background: #000000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #2980b9;
+}
+
