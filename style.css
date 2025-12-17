@@ -188,5 +188,34 @@ footer {
 
 .news-card p {
   line-height: 1.6;
-} 
+}.contact-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 40px;
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
