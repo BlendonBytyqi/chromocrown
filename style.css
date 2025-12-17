@@ -91,4 +91,15 @@ footer {
   cursor: pointer;
   z-index: 10;
   transition: 0.3s;
+}.about-container {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #333;
 }
