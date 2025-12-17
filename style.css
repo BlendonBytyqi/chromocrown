@@ -188,8 +188,8 @@ footer {
 
 .news-card p {
   line-height: 1.6;
-<<<<<<< HEAD
-}.contact-container {
+}
+.contact-container {
   max-width: 800px;
   margin: auto;
   padding: 60px 40px;
@@ -218,72 +218,5 @@ footer {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-=======
-} 
-.page-title {
-  text-align: center;
-  margin: 40px 0;
-  font-size: 2.5rem;
->>>>>>> 437df771bd585e4041342dc4c7faae180ff0368c
 }
 
-.products {
-  display: flex;
-  justify-content: center;
-  padding: 40px
-}
-
-.product {
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px
-}
-
-.product a {
-  display: block;
-  margin-top: 10px;
-  color: #000
-}
-
-.product-details {
-  background: #fff;
-  padding: 40px;
-  margin: 40px auto;
-  max-width: 600px
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 0 40px 60px;
-}
-
-.product-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  padding-bottom: 20px;
-  transition: transform 0.3s;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px 10px 0 0;
-}
-
-.product-card h3 {
-  margin: 15px 0 10px;
-}
-
-.product-card p {
-  font-size: 0.9rem;
-  padding: 0 15px;
-}
