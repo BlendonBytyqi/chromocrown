@@ -1,0 +1,260 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial;background:#f4f4f4;color:#222}
+header{background:#000;color:#fff;padding:15px;display:flex;justify-content:space-between}
+.simple-header{text-align:center;background:#000;color:#fff;padding:15px;font-weight:bold}
+nav a{color:#fff;margin-left:15px;text-decoration:none}
+.center{text-align:center;margin:40px 0}
+
+
+.slide{display:none}
+.slide.active{display:block}
+.products{display:flex;justify-content:center;padding:40px}
+.product{background:#fff;padding:20px;border-radius:6px}
+.product a{display:block;margin-top:10px;color:#000}
+.product-details{background:#fff;padding:40px;margin:40px auto;max-width:600px}
+.back-btn{display:inline-block;margin-top:20px}
+form{background:#fff;padding:30px;max-width:400px;margin:40px auto}
+input,textarea,button{width:100%;padding:10px;margin-bottom:10px}
+button{background:#000;color:#fff;border:none;cursor:pointer}
+.error{color:red;font-size:.9rem}
+footer{text-align:center;background:#000;color:#aaa;padding:20px}
+
+.page-title {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 2.5rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 40px 60px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  padding: 0 15px;
+}
+
+.btn-outline {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 20px;
+  border: 2px solid black;
+  color: black;
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: black;
+  color: white;
+}
+
+.news-container {
+  padding: 60px 40px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.news-card h3 {
+  margin-bottom: 10px;
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.news-card p {
+  line-height: 1.6;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+}
+.about-container {
+  padding: 60px 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #333;
+}
+/* CONTACT PAGE */
+.contact-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 40px;
+}
+
+.contact-text {
+  text-align: center;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.login-container .tab {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.login-container .tab div {
+    padding: 10px 20px;
+    border-bottom: 2px solid transparent;
+    font-weight: bold;
+}
+
+.login-container .tab .active {
+    border-color: #3498db;
+    color: #3498db;
+}
+
+.login-container form {
+    display: none;
+    flex-direction: column;
+}
+
+.login-container form.active {
+    display: flex;
+}
+
+.login-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-container button {
+    padding: 10px;
+    border: none;
+    background: #000000;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background: #2980b9;
+}
+
+
+
+slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+
+#slideshow {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  font-size: 19px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.nav:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
