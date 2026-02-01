@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>CHROMOCROWN | Login</title>
+<title>CHROMOCROWN | Register</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
@@ -13,24 +13,6 @@
   padding: 30px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-.login-container .tab {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
-  cursor: pointer;
-}
-
-.login-container .tab div {
-  padding: 10px 20px;
-  border-bottom: 2px solid transparent;
-  font-weight: bold;
-}
-
-.login-container .tab .active {
-  border-color: #3498db;
-  color: #3498db;
 }
 
 .login-container input {
@@ -61,6 +43,12 @@
   text-align: center;
   margin-bottom: 10px;
 }
+
+.success {
+  color: green;
+  text-align: center;
+  margin-bottom: 10px;
+}
 </style>
 </head>
 
@@ -80,23 +68,28 @@
 
 <section class="login-container">
 
-<?php if (isset($_GET['error'])): ?>
+<?php if(isset($_GET['error'])): ?>
   <div class="error">
     <?php
-      if ($_GET['error'] == 'empty') echo "Mbushi të gjitha fushat!";
-      if ($_GET['error'] == 'invalid') echo "Username ose password gabim!";
+      if($_GET['error']=='empty') echo "Mbushi të gjitha fushat!";
+      if($_GET['error']=='exists') echo "Username ose email ekziston!";
     ?>
   </div>
 <?php endif; ?>
 
-<form id="login-form" class="active" method="POST" action="login_handler.php">
+<?php if(isset($_GET['success']) && $_GET['success']=='registered'): ?>
+  <div class="success">Regjistrimi u bë me sukses! Mundesh me bo login.</div>
+<?php endif; ?>
+
+<form method="POST" class="active" action="register_handler.php">
     <input type="text" name="username" placeholder="Username" required>
+    <input type="email" name="email" placeholder="Email" required>
     <input type="password" name="password" placeholder="Password" required>
-    <button type="submit">Login</button>
+    <button type="submit">Signup</button>
 </form>
 
 <p style="text-align:center; margin-top:10px;">
-<a href="register.php">Nuk ke account? Regjistrohu këtu</a>
+<a href="login.php">Ke account? Kyçu këtu</a>
 </p>
 
 </section>
