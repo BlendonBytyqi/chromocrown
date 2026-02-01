@@ -1,3 +1,10 @@
+
+<?php
+
+
+require_once __DIR__ . '/admin_guard.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -104,11 +111,29 @@
 </style>
 
 <body>
-  <header>
-    <div class="logo">CHROMOCROWN</div>
-    <nav> <a href="home.php">Home</a> <a href="about.php">About</a> <a href="products.php">Products</a> <a
-        href="news.php">News</a> <a href="contact.php">Contact</a> <a href="login.php">Login/Signup</a> </nav>
-  </header>
+ <header>
+  <div class="logo">CHROMOCROWN</div>
+
+  <nav>
+    <a href="home.php">Home</a>
+    <a href="about.php">About</a>
+    <a href="products.php">Products</a>
+    <a href="news.php">News</a>
+    <a href="contact.php">Contact</a>
+
+    <?php if (isset($_SESSION['user_id'])): ?>
+
+      <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+        <a href="admin_products.php">Admin</a>
+      <?php endif; ?>
+
+      <a href="logout.php">Logout</a>
+
+    <?php else: ?>
+      <a href="login.php">Login / Signup</a>
+    <?php endif; ?>
+  </nav>
+</header>
   <div class="slider"> <img id="slideshow" /> <button class="nav prev" onclick="backImg()">‹</button> <button
       class="nav next" onclick="nextImg()">›</button> </div>
   <footer>© 2025 CHROMOCROWN</footer>

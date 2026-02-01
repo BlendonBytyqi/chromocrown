@@ -1,3 +1,8 @@
+<?php
+
+
+require_once __DIR__ . '/admin_guard.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,17 +12,29 @@
 </head>
 <body>
 
-  <header class="navbar">
-    <h2 class="logo">CHROMOCROWN</h2>
-    <nav>
-      <a href="home.php">Home</a>
-      <a href="about.php">About</a>
-      <a href="products.php">Products</a>
-      <a href="news.php">News</a>
-      <a href="contact.php" class="active">Contact</a>
-      <a href="login.php">Login/Signup</a>
-    </nav>
-  </header>
+  <header>
+  <div class="logo">CHROMOCROWN</div>
+
+  <nav>
+    <a href="home.php">Home</a>
+    <a href="about.php">About</a>
+    <a href="products.php">Products</a>
+    <a href="news.php">News</a>
+    <a href="contact.php">Contact</a>
+
+    <?php if (isset($_SESSION['user_id'])): ?>
+
+      <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+        <a href="admin_products.php">Admin</a>
+      <?php endif; ?>
+
+      <a href="logout.php">Logout</a>
+
+    <?php else: ?>
+      <a href="login.php">Login</a>
+    <?php endif; ?>
+  </nav>
+</header>
 
   <main class="contact-container">
     <h1 class="page-title">Contact Us</h1>

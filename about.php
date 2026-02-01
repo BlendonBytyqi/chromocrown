@@ -1,3 +1,8 @@
+<?php
+
+require_once __DIR__ . '/admin_guard.php';
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +82,17 @@
       <a href="products.php">Products</a>
       <a href="news.php">News</a>
       <a href="contact.php">Contact</a>
-      <a href="login.php">Login/Signup</a>
+     <?php if (isset($_SESSION['user_id'])): ?>
+
+      <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin'): ?>
+        <a href="admin_products.php">Admin</a>
+      <?php endif; ?>
+
+      <a href="logout.php">Logout</a>
+
+    <?php else: ?>
+      <a href="login.php">Login</a>
+    <?php endif; ?>
     </nav>
   </header>
 
