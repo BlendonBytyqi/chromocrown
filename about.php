@@ -72,7 +72,7 @@
   <header class="navbar">
     <h2 class="logo">CHROMOCROWN</h2>
     <nav>
-      <a href="index.php">Home</a>
+      <a href="home.php">Home</a>
       <a href="about.php" class="active">About</a>
       <a href="products.php">Products</a>
       <a href="news.php">News</a>

@@ -6,7 +6,40 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<style>
+  
+.news-container {
+  padding: 60px 40px;
+}
 
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.news-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h3 {
+  margin-bottom: 10px;
+}
+
+.news-date {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.news-card p {
+  line-height: 1.6;
+}
+
+</style>
   <header class="navbar">
     <h2 class="logo">CHROMOCROWN</h2>
     <nav>
@@ -15,7 +48,7 @@
       <a href="products.php">Products</a>
       <a href="news.php">News</a>
       <a href="contact.php" class="active">Contact</a>
-      <a href="login.php">Login/Signup</a>
+      <a href="login.php">Login</a>
     </nav>
   </header>
 
@@ -60,19 +93,6 @@
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded',()=>{
-
-const emailValid=e=>/\S+@\S+\.\S+/.test(e);
-
-const contact=document.getElementById('contactForm');
-if(contact){
-contact.addEventListener('submit',e=>{
-e.preventDefault();
-if(!name.value||!emailValid(email.value)||!message.value){
-contactError.textContent='Please fill all fields correctly';
-}else alert('Message sent successfully');
-});
-}
 
   </script>
 </body>
