@@ -1,6 +1,6 @@
 let i = 0;
 let interval;
-
+let test; 
 let imgArray = [
 
   
